@@ -1,0 +1,62 @@
+<section class="project-detail">
+    <div class="back-button">
+        <a href="/projects" class="btn-back">
+            <i class="fas fa-arrow-left"></i> Regresar
+        </a>
+    </div>
+
+    <div class="project-detail-content">
+        <h1>{{project.title}}</h1>
+        
+        <div class="project-detail-slider">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    {{#each project.images}}
+                    <div class="swiper-slide">
+                        <img src="{{this}}" alt="Project screenshot">
+                    </div>
+                    {{/each}}
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+
+        <div class="project-info">
+            <div class="project-description">
+                <h2>Descripcion</h2>
+                <p>{{project.longDescription}}</p>
+            </div>
+
+            <div class="project-tech">
+                <h2>Tecnologias utilizadas</h2>
+                <div class="tech-stack">
+                    {{#each project.tech}}
+                    <span class="tech-tag">{{this}}</span>
+                    {{/each}}
+                </div>
+            </div>
+
+            {{#if project.features}}
+            <div class="project-features">
+                <h2>Principales caracteristicas</h2>
+                <ul>
+                    {{#each project.features}}
+                    <li><i class="fas fa-check"></i> {{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            {{/if}}
+
+            <div class="project-links">
+                <a href="{{project.github}}" class="btn primary" target="_blank">
+                    <i class="fab fa-github"></i> Ver codigo
+                </a>
+                <a href="{{project.link}}" class="btn secondary" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Ver demo
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

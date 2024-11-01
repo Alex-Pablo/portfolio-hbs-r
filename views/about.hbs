@@ -1,0 +1,29 @@
+<section class="about">
+    <div class="about-content">
+        <h2>Sobre me.</h2>
+        <div class="about-text">
+          <p>¡Hola! Soy un desarrollador apasionado por crear soluciones para la web. Disfruto desarrollando software que vive en internet, ya sea sitios web, aplicaciones o cualquier otra herramienta digital.</p>
+          <p>A continuación, presento algunas de las tecnologías con las que he trabajado recientemente:</p>
+        </div>
+        <br/>
+        <div class="skills-grid">
+            {{#each skills}}
+            <div class="skill-item">
+                <i class="fas fa-caret-right"></i>
+                <span>{{this}}</span>
+            </div>
+            {{/each}}
+        </div>
+
+        <div class="experience-section">
+            <h3>En donde he trabajado</h3>
+            {{#each experience}}
+            <div class="experience-item">
+                <h4>{{role}} @ {{company}}</h4>
+                <p class="experience-period">{{period}}</p>
+                <p class="experience-description">{{description}}</p>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
