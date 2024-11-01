@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "express": "^4.21.1",
-    "hbs": "^4.2.0"
+    "hbs": "^4.2.0",
     "start":"node app.js"
   },
   "name": "portfolio",
